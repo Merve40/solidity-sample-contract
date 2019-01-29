@@ -1,2 +1,6 @@
-# solidity-sample-contract
-A sample smart contract based on Solidity
+# Sample Smart Contract written in Solidity
+
+Initialize project
+```
+npm install
+```
