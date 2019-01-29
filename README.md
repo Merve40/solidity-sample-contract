@@ -2,7 +2,10 @@
 
 Tutorial for deploying a smart contract can be found [here](https://steemit.com/utopian-io/@igormuba/part-12-ethereum-solidity-using-truffle-ganache-and-zeppelin-to-deploy-pt-12)
 
-[Node.js](https://nodejs.org/en/)
+[Node.js](https://nodejs.org/en/)   
+[ganache-cli](https://github.com/trufflesuite/ganache-cli) for running a local blockchain   
+[Web3.js](https://web3js.readthedocs.io/en/1.0/) client-side library for accessing blockchain
+
 
 ## Steps for setting up development environment
 
