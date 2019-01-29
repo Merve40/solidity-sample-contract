@@ -1,0 +1,169 @@
+<html>
+<head>
+    <title>Smart Contract Demo</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial.scale = 1">
+
+    <link rel="stylesheet" href="bootstrap-css">
+
+    <script src="jquery"></script>
+
+    <script src="bootstrap"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" 
+    integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+
+    <script src="index.js" type="application/javascript"></script>
+    <link href="style.css" rel="stylesheet">
+
+    <script src="contract" type="application/javascript"></script>
+
+</head>
+
+<body>
+
+    <div class="col-12">
+        
+    </div>
+
+    <div class="">
+
+        <div class="col-12">
+
+            <div id="panel" class="col-lg-8 col-md-8 col-sm-12 col-12 offset-lg-2 offset-md-2 p-3">
+
+                <div id="notificationAlert" class="alert alert-success alert-dismissible fade show" >
+                    <strong id="notification" ></strong>
+                    <button id="btn-notification" type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                
+                <div id="login" class="input-group mb-3">
+                    <input id="pkey" type="text" class="form-control" placeholder="Private-Key" aria-label="pkey" 
+                        aria-describedby="btn-pkey">
+
+                    <div class="input-group-append">
+                        <button id="btn-pkey" class="btn btn-secondary" type="button" >Login</button>
+                    </div>
+                </div>
+
+                <div id="account-data">
+                    <div class="row">
+                        <div id="user-group" class="label col-12" style="color:gainsboro;text-align:center;">RWTH Administration</div>
+                    </div>
+                    <div class="row">
+                        <hr class="col-10 offset-1">
+                    </div>
+                    <div class="row">
+                        <strong class="label col-4">Account Address</strong>
+                        <strong class="label col-4 offset-4" style="text-align:end;">Balance</strong>
+                    </div>
+
+                    <div class="row">
+                        <strong class="col-4" id="account-no"> </strong>
+                        <strong class="col-4 offset-4" id="balance"></strong>
+                    </div>
+                </div>  
+        </div>
+        
+
+        <div class="institution">
+
+            <div class="col-12">
+                <button id="btn-show-register" 
+                        class="btn btn-outline-secondary btn-large col-lg-6 col-md-5 col-sm-8 col-8 
+                                    offset-lg-3 offset-md-3 offset-sm-2 offset-2 mt-5">Register new Semester</button>
+            </div>
+
+            <div id="form-register" class="col-12" style="margin-top:50px;">
+                <div class="form-group col-lg-6 col-md-5 col-sm-8 col-8 offset-lg-3 offset-md-3 offset-sm-2 offset-2">
+                    <label for="exampleInputEmail1">Semester Term</label>
+                    <input type="text" class="form-control" id="term" aria-describedby="term" placeholder="Enter 'Winter' or 'Summer'">
+                </div>
+                <div class="form-group col-lg-6 col-md-5 col-sm-8 col-8 offset-lg-3 offset-md-3 offset-sm-2 offset-2">
+                    <label for="exampleInputEmail1">Year</label>
+                    <input type="number" class="form-control" id="year" aria-describedby="year" placeholder="Enter Year">
+                </div>
+                <div class="form-group col-lg-6 col-md-5 col-sm-8 col-8 offset-lg-3 offset-md-3 offset-sm-2 offset-2">
+                    <label for="exampleInputEmail1">Tuition Fee</label>
+                    <input type="number" class="form-control" id="tfee" aria-describedby="tfee" placeholder="Enter Tuition Fee">
+                </div>
+                <div class="form-group col-lg-6 col-md-5 col-sm-8 col-8 offset-lg-3 offset-md-3 offset-sm-2 offset-2">
+                    <label for="exampleInputEmail1">Abbreviation</label>
+                    <input type="text" class="form-control" id="abbrv" aria-describedby="abbrv" placeholder="Enter Abbreviation, e.g. 'S19'">
+                </div>
+                <div class="form-group col-lg-6 col-md-5 col-sm-8 col-8 offset-lg-3 offset-md-3 offset-sm-2 offset-2">
+                    <button id="btn-register" class="btn btn-secondary btn-large">Register</button>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <table id="table" class="table col-lg-8 col-md-8 col-sm-10 col-10 offset-lg-2 offset-md-2 offset-sm-1 offset-1" 
+                                    style="margin-top:50px;">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">Abbreviation</th>
+                        <th scope="col">Term</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Tuition Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="student">
+            <div class="col-12">
+                <table id="table-student" 
+                            class="table col-lg-8 col-md-8 col-sm-10 col-10 offset-lg-2 offset-md-2 offset-sm-1 offset-1" style="margin-top:50px;">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">Abbreviation</th>
+                        <th scope="col">Term</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Tuition Fee</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody2">
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="form-registration" class="col-12">
+                <h3 class="col-6 offset-3">Registration Form:</h3>
+                <div class="form-group col-6 offset-3">
+                    <label>Name*</label>
+                    <input id="name" class="form-control" type="text" placeholder="Lastname, Name">
+                </div>
+                <div class="form-group col-6 offset-3">
+                    <label>Matriculation Number*</label>
+                    <input id="matr" class="form-control" type="number" >
+                </div>
+                <div class="form-group col-6 offset-3">
+                    <button id="btn-register-student" class="btn btn-secondary btn-large">Register</button>
+                </div>
+            </div>
+
+            <!--
+                    RECEIPT
+            -->
+            <div class="col-12">
+                <div id="receipt" class="alert alert-success col-lg-8 col-md-8 col-sm-10 col-10 offset-lg-2 offset-md-2 offset-sm-1 offset-1" >
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

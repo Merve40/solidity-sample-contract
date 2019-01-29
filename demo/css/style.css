@@ -1,0 +1,32 @@
+#panel{
+    background-color: black;
+}
+
+#account-no{
+    color:gainsboro;
+}
+
+#balance{
+    text-align: end;
+    color: gainsboro;
+}
+
+.label{
+    color:gray;
+}
+
+#notificationAlert{
+    position: absolute;
+    top:0px;
+    right:0px;
+    z-index: 20000;
+}
+
+#receipt{
+    word-break: break-all;
+}
+
+hr{
+    size: 3px;
+    background-color: gainsboro;
+}
