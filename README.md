@@ -1,6 +1,6 @@
 # Sample Smart Contract written in Solidity
 
-Tutorial for deploying a smart contract can be found [here](https://steemit.com/utopian-io/@igormuba/part-12-ethereum-solidity-using-truffle-ganache-and-zeppelin-to-deploy-pt-12)
+**Tutorial** for deploying a smart contract can be found [here](https://steemit.com/utopian-io/@igormuba/part-12-ethereum-solidity-using-truffle-ganache-and-zeppelin-to-deploy-pt-12)
 
 ## Resources
 [Node.js](https://nodejs.org/en/)   
